@@ -11,7 +11,7 @@ import Foundation
 /**
    Please help you in basic task for your development
 */
-struct Please {
+public struct Please {
     
     /**
         This method get data from URL, the response of this method must be a decodable object
@@ -20,7 +20,7 @@ struct Please {
             - type: type of object with decodable
             - completition: callback for get data in an object, previous decable
     */
-    static func getData<T: Decodable>(from url: URL, as type: T.Type = T.self, completition: @escaping (_ value: T) -> Void) {
+    public static func getData<T: Decodable>(from url: URL, as type: T.Type = T.self, completition: @escaping (_ value: T) -> Void) {
         let defaultConfig = URLSessionConfiguration.default
         let networkSession = URLSession(configuration: defaultConfig)
         networkSession.dataTask(with: url) { (data, _, error) in
