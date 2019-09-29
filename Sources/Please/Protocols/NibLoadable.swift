@@ -26,7 +26,7 @@ public extension NibLoadable where Self: UIView {
         return UINib(nibName: nibName, bundle: nibBundle)
     }
 
-    static func loadFormNib<T>() -> T? {
+    static func loadFromNib<T>() -> T? {
         return nibBundle.loadNib(named: nibName)
     }
 }
