@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Please'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'Please, is my utils libs for my iOS projects.'
   s.description      = <<-DESC
 Please, is my utils libs for my iOS projects, it has differents utils for Autolayout, Networking, etc.
