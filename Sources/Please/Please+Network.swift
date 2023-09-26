@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Please {
+public extension Please {
     /**
         This method get data from URL, the response of this method must be a decodable object
         - parameters:
@@ -15,7 +15,7 @@ extension Please {
             - type: type of object with decodable
             - completition: callback for get data in an object, previous decable
     */
-    public static func getData<T: Decodable>(from url: URL, as type: T.Type = T.self, completition: @escaping (_ value: T) -> Void) {
+    static func getData<T: Decodable>(from url: URL, as type: T.Type = T.self, completition: @escaping (_ value: T) -> Void) {
         let defaultConfig = URLSessionConfiguration.default
         let networkSession = URLSession(configuration: defaultConfig)
         networkSession.dataTask(with: url) { (data, _, error) in
